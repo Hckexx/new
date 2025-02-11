@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panda Loves Bebo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://wallpaper.dog/large/11039577.jpg'); /* Add a panda-themed background image */
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      background: rgba(255, 182, 193, 0.8); /* Light pink background with transparency */
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); /* Pink shadow */
+    }
+
+    .panda {
+      font-size: 100px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .heart {
+      font-size: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    .text {
+      font-size: 30px;
+      color: #ff1493; /* Deep pink color */
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="panda">🐼</div>
+    <div class="heart">❤️</div>
+    <div class="text">Panda Loves Bebo</div>
+  </div>
+
+  <script>
+    // Optional: Add interactivity or additional effects with JavaScript
+    const heart = document.querySelector('.heart');
+    const panda = document.querySelector('.panda');
+
+    panda.addEventListener('mouseover', () => {
+      heart.style.opacity = '1';
+    });
+
+    panda.addEventListener('mouseout', () => {
+      heart.style.opacity = '0';
+    });
+  </script>
+</body>
+</html>
